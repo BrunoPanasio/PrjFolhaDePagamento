@@ -11,6 +11,13 @@ public class Chefe extends Funcionario {
 	}
 
 	@Override
+	public String toString() {
+		return "Chefe [salarioBase=" + salarioBase + ", adicionalFuncao=" + adicionalFuncao + ", beneficioTerno="
+				+ beneficioTerno + ", nome=" + nome + ", numeroRegistro=" + numeroRegistro + ", calcularSalario()="
+				+ calcularSalario() + "]";
+	}
+
+	@Override
 	public float calcularSalario() {
 		return salarioBase + salarioBase*adicionalFuncao/100 + beneficioTerno;
 	}
@@ -20,6 +27,7 @@ public class Chefe extends Funcionario {
 	}
 
 	public void setSalarioBase(float salarioBase) {
+		if( salarioBase <= 0) throw new RuntimeException("Salario base não pode ser zero");
 		this.salarioBase = salarioBase;
 	}
 

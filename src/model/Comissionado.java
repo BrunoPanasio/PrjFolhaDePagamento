@@ -1,6 +1,11 @@
 package model;
 
 public class Comissionado extends Funcionario {
+	@Override
+	public String toString() {
+		return "Comissionado [salarioBase=" + salarioBase + ", comissao=" + comissao + "]";
+	}
+
 	private float salarioBase, comissao;
 
 	public Comissionado(String nome, int numeroRegistro, float salarioBase, float comissao) {
@@ -23,6 +28,7 @@ public class Comissionado extends Funcionario {
 	}
 
 	public void setSalarioBase(float salarioBase) {
+		if( salarioBase <= 0) throw new RuntimeException("Salario base não pode ser zero");
 		this.salarioBase = salarioBase;
 	}
 

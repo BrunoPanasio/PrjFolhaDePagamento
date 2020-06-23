@@ -24,6 +24,10 @@ public class Horista extends Funcionario {
 	public void setNumeroHoras(int numeroHoras) {
 		this.numeroHoras = numeroHoras;
 	}
+	@Override
+	public String toString() {
+		return "Horista [valorHora=" + valorHora + ", numeroHoras=" + numeroHoras + "]";
+	}
 	
 	
 	
