@@ -1,10 +1,6 @@
 package ui;
 import java.util.ArrayList;
-import model.Chefe;
-import model.Funcionario;
-import model.Comissionado;
-import model.Empreiteiro;
-import model.Horista;
+import model.*;
 public class folhaDePagamento {
 	public static void main(String[] args) {
 		ArrayList<Funcionario> lista;
